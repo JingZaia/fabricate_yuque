@@ -27,10 +27,14 @@
                             src="https://p3-passport.byteimg.com/img/user-avatar/5c9a2641877196605c37fdb39f173b17~100x100.awebp"
                             />
                             <div class="info">
-                                <div class="title"><span>京仔咯</span>
+                                <div class="title">
+                                    <span>京仔咯</span>
                                     <n-popover trigger="hover">
                                         <template #trigger>
-                                            <Icon size="16"><ShieldCheckmark24Filled/></Icon>
+                                            <Icon size="16">
+                                                <ShieldCheckmark24Filled/>
+                                                <!-- <svg width="1em" height="1em" viewBox="0 0 27 26" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" data-name="Unsafe" class="larkui-icon larkui-icon-unsafe icon-svg badge-module_unsafeIcon_fj7tW un-safe-icon index-module_size_wVASz" style="width: 24px; min-width: 24px; height: 24px;"><defs><path id="1154376943a" d="M0 0h20v20H0z"></path></defs><g fill="none" fill-rule="evenodd"><g transform="translate(0 6)"><mask id="1154376943b" fill="#fff"><use xlink:href="#1154376943a"></use></mask><path d="m9.072 1.572-.082.043-.077.04-.073.037-.101.052-.063.031-.087.043-.078.036a14.834 14.834 0 0 1-4.202 1.231l-.115.016-.056.007c-.892.113-1.56.87-1.56 1.767v6.552c0 .618.143 1.228.424 1.823a7.783 7.783 0 0 0 1.006 1.588c.404.498.861.968 1.37 1.41.503.435 1.015.823 1.538 1.164.524.342 1.031.629 1.524.858.483.225.919.385 1.313.48l.061.015.311.063.334-.062.02-.004c.399-.094.843-.26 1.338-.495.485-.23.981-.518 1.49-.863.504-.341 1-.73 1.488-1.165.496-.441.94-.913 1.33-1.412a7.84 7.84 0 0 0 .97-1.59 4.36 4.36 0 0 0 .405-1.81v-6.64c0-.84-.621-1.549-1.451-1.662l-.057-.007c-.063-.007-.13-.016-.198-.026l-.063-.009c-1.218-.177-2.596-.56-4.064-1.214l-.11-.05-.052-.023-.114-.054-.095-.046-.14-.068-.155-.077a2.111 2.111 0 0 0-1.93.021Z" fill="currentColor" mask="url(#1154376943b)"></path><path d="m10.397 6.102-3.012 4.133a.484.484 0 0 0-.093.285l.008.087a.484.484 0 0 0 .476.397h1.302l-.346 2.623a.484.484 0 0 0 .87.349l3.013-4.133a.484.484 0 0 0 .093-.285l-.008-.087a.484.484 0 0 0-.476-.397l-1.303-.001.347-2.622a.484.484 0 0 0-.87-.349Z" fill="#FFF" fill-rule="nonzero" mask="url(#1154376943b)"></path></g><g transform="translate(12 1)"><path d="M0 0h14v14H0z"></path><circle fill="#FAAD14" cx="7" cy="7" r="6.125"></circle><path d="M7-.375a7.375 7.375 0 1 0 0 14.75A7.375 7.375 0 0 0 7-.375Zm0 1.25a6.125 6.125 0 1 1 0 12.25A6.125 6.125 0 0 1 7 .875Z" fill="#FFF" fill-rule="nonzero"></path><g transform="matrix(1 0 0 -1 6.344 10.5)" fill="#FFF"><circle cx="0.656" cy="0.656" r="1"></circle><path d="M.656 2.406c.302 0 .547.245.547.547v3.5a.547.547 0 0 1-1.094 0v-3.5c0-.302.245-.547.547-.547Z"></path></g></g></g></svg> -->
+                                            </Icon>
                                         </template>
                                         <span>你的帐号安全系数低升级保障</span>
                                     </n-popover>
@@ -180,7 +184,7 @@ header{
             box-shadow: 1px 0 10px 3px rgba(0,0,0,.05);
             background-color: white;
             border-radius: 10px;
-            z-index: 20;
+            z-index: 10;
             padding: 20px;
             overflow: hidden;
             animation: modal-and 0.2s ease;

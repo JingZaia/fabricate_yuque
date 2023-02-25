@@ -6,7 +6,7 @@
             :collapsed-width="60"
             :width="254"
             show-trigger="arrow-circle"
-            content-style="overflow:none;padding:15px"
+            content-style="overflow:none;padding:15px;background-color:#fafafa;"
             bordered
             >
             <Menu/>
