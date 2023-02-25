@@ -6,18 +6,13 @@
             :collapsed-width="60"
             :width="254"
             show-trigger="arrow-circle"
-            content-style="padding:15px"
-            style="min-height:100%"
+            content-style="overflow:none;padding:15px"
             bordered
             >
             <Menu/>
             </n-layout-sider>
             <n-layout>
-                <n-layout-header>颐和园路</n-layout-header>
-                <n-layout-content content-style="padding: 24px;">
-                    平山道
-                </n-layout-content>
-                <n-layout-footer>成府路</n-layout-footer>
+                <RouterView />
             </n-layout>
         </n-layout>
     </main>
@@ -36,7 +31,7 @@ main{
     width: 100%;
     min-height: 100vmin;
     .n-layout{
-        min-height:100%;
+        height:100vmin;
     }
 }
 </style>
