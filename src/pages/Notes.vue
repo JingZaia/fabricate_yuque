@@ -1,6 +1,6 @@
 <template>
     <main class="contianr flex">
-        <div class="pl-8 pr-8 w-2/5">
+        <div class="pl-8 pr-8 w-630px" >
             <p class="title">小记</p>
             <div class="w-auto border-solid border overflow-hidden rounded-md border-gray-200 min-h-580">
                 <Toolbar
@@ -39,9 +39,9 @@
                     </n-popselect>
                 </div>
             </div>
-
-            <div class="flex justify-between gap-2.5 mb-3 ml-10">
-                <div><n-checkbox /></div>
+            <!-- items -->
+            <div class="group flex justify-between gap-2.5 mb-3 ml-10">
+                <div class=" gap-2 opacity-0 group-hover:opacity-100 transition-all"><n-checkbox /></div>
                 <div class="flex flex-col gap-2 flex-1 h-auto p-5 bg-white transition-all shadow-sm hover:shadow-md rounded-xl">
                     <div ><span class="text-gray-500">更新于 昨天 16:08</span></div>
                     <div></div>
@@ -54,43 +54,18 @@
                         </n-popover>
                     </div>
                 </div>
-                <div class="flex flex-col mr-2 gap-2">
-                    <button class="flex justify-center items-center bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
-                        <Icon size="20"><CalligraphyPen24Filled/></Icon>
-                    </button>
-                    <n-popselect :options="upTime">
+                <div class="flex flex-col mr-2 gap-2 opacity-0 group-hover:opacity-100 transition-all">
                         <button class="flex justify-center items-center bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
-                            <Icon size="20"><MoreVertical16Filled/></Icon>
+                            <Icon size="20"><CalligraphyPen24Filled/></Icon>
                         </button>
-                    </n-popselect>
+                        <n-popselect :options="upTime">
+                            <button class="flex justify-center items-center bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
+                                <Icon size="20"><MoreVertical16Filled/></Icon>
+                            </button>
+                        </n-popselect>
                 </div>
             </div>
-            
-            <div class="flex justify-between gap-2.5 mb-3 ml-10">
-                <div><n-checkbox /></div>
-                <div class="flex flex-col gap-2 flex-1 h-auto p-5 bg-white transition-all shadow-sm hover:shadow-md rounded-xl">
-                    <div ><span class="text-gray-500">更新于 昨天 16:08</span></div>
-                    <div></div>
-                    <div>
-                        <n-popover trigger="hover">
-                            <template #trigger>
-                                <n-tag round >爱在西元前</n-tag>
-                            </template>
-                            <span>或许不想知道你的花园长得咋样</span>
-                        </n-popover>
-                    </div>
-                </div>
-                <div class="flex flex-col mr-2 gap-2">
-                    <button class="flex justify-center items-center bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
-                        <Icon size="20"><CalligraphyPen24Filled/></Icon>
-                    </button>
-                    <n-popselect :options="upTime">
-                        <button class="flex justify-center items-center bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
-                            <Icon size="20"><MoreVertical16Filled/></Icon>
-                        </button>
-                    </n-popselect>
-                </div>
-            </div>
+          
         </div>
         
     </main>
