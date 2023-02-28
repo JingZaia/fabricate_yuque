@@ -39,18 +39,54 @@
                     </n-popselect>
                 </div>
             </div>
-            <div class="flex justify-between gap-2.5 ml-10">
-                <div><n-checkbox /></div>
-                <div class="flex-1 h-80 bg-white transition-all shadow-sm hover:shadow-md rounded-md">
 
+            <div class="flex justify-between gap-2.5 mb-3 ml-10">
+                <div><n-checkbox /></div>
+                <div class="flex flex-col gap-2 flex-1 h-auto p-5 bg-white transition-all shadow-sm hover:shadow-md rounded-xl">
+                    <div ><span class="text-gray-500">更新于 昨天 16:08</span></div>
+                    <div></div>
+                    <div>
+                        <n-popover trigger="hover">
+                            <template #trigger>
+                                <n-tag round >爱在西元前</n-tag>
+                            </template>
+                            <span>或许不想知道你的花园长得咋样</span>
+                        </n-popover>
+                    </div>
                 </div>
                 <div class="flex flex-col mr-2 gap-2">
-                    <button class="bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
-                        <Icon size="18"><ArrowSortDownLines20Filled/></Icon>
+                    <button class="flex justify-center items-center bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
+                        <Icon size="20"><CalligraphyPen24Filled/></Icon>
                     </button>
-                    <n-popselect  :options="upTime">
-                        <button class="bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
-                            <Icon size="18"><ArrowSortDownLines20Filled/></Icon>
+                    <n-popselect :options="upTime">
+                        <button class="flex justify-center items-center bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
+                            <Icon size="20"><MoreVertical16Filled/></Icon>
+                        </button>
+                    </n-popselect>
+                </div>
+            </div>
+            
+            <div class="flex justify-between gap-2.5 mb-3 ml-10">
+                <div><n-checkbox /></div>
+                <div class="flex flex-col gap-2 flex-1 h-auto p-5 bg-white transition-all shadow-sm hover:shadow-md rounded-xl">
+                    <div ><span class="text-gray-500">更新于 昨天 16:08</span></div>
+                    <div></div>
+                    <div>
+                        <n-popover trigger="hover">
+                            <template #trigger>
+                                <n-tag round >爱在西元前</n-tag>
+                            </template>
+                            <span>或许不想知道你的花园长得咋样</span>
+                        </n-popover>
+                    </div>
+                </div>
+                <div class="flex flex-col mr-2 gap-2">
+                    <button class="flex justify-center items-center bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
+                        <Icon size="20"><CalligraphyPen24Filled/></Icon>
+                    </button>
+                    <n-popselect :options="upTime">
+                        <button class="flex justify-center items-center bg-white p-1.5 shadow-lg w-10 h-10 rounded-md">
+                            <Icon size="20"><MoreVertical16Filled/></Icon>
                         </button>
                     </n-popselect>
                 </div>
@@ -66,10 +102,10 @@ import '@wangeditor/editor/dist/css/style.css'
 import { Editor, Toolbar } from '@wangeditor/editor-for-vue'
 import { IToolbarConfig } from '@wangeditor/editor'
 /* icon */
-import {Search12Filled,ArrowSortDownLines20Filled,Filter16Filled} from "@vicons/fluent";
+import {Search12Filled,ArrowSortDownLines20Filled,Filter16Filled,CalligraphyPen24Filled,MoreVertical16Filled} from "@vicons/fluent";
 import {Icon} from "@vicons/utils"
 
-import {NPopselect,NButton,NCheckbox} from "naive-ui"
+import {NPopselect,NButton,NCheckbox,NTag,NPopover} from "naive-ui"
 
 const options=reactive([
         {
@@ -154,6 +190,5 @@ const handleCreated = (editor:any) => {
 <style scoped lang="scss">
     main{
         .title{font-size: 18px;line-height: 75px;}
-
     }
 </style>
