@@ -1,36 +1,45 @@
 <template>
-    <div class="flex justify-between items-center pl-8 pr-8">
-        <p class="title">收藏</p>
-        <div class="space-x-5">
-            <Icon size="18"><Search12Filled/></Icon>
-            <n-popselect  :options="options">
-                <Icon size="18"><Filter16Filled/></Icon>
-            </n-popselect>
-            <n-popselect :options="upTime">
-                <Icon size="18"><ArrowSortDownLines20Filled/></Icon>
-            </n-popselect>
-        </div>
-    </div>
-    <div class="flex h-5/6">
-        <div class="w-235px h-auto border-r pl-10 pr-5">
-            <div class="w-auto bg-gray-100 rounded-lg p-3  space-y-2">
-                <div class="flex justify-between items-center">
-                    <span>全部收藏</span>
-                    <Icon size="18" color="gray"><Add12Filled/></Icon>
-                </div>
-                <div><span class="text-gray-400  text-xs">3 条内容</span></div>
-            </div>
-        </div>
-        <div class="flex-1 h-auto px-5">
-            Test
-        </div>
-    </div>
+    <main class="flex flex-col">
+      <div class="flex justify-between items-center pl-8 pr-8">
+          <p class="title">收藏</p>
+          <div class="space-x-5">
+              <Icon size="18"><Search12Filled/></Icon>
+              <n-popselect  :options="options">
+                  <Icon size="18"><Filter16Filled/></Icon>
+              </n-popselect>
+          </div>
+      </div>
+      <div class="flex flex-1">
+          <div class="w-235px h-auto border-r pl-8 pr-3 space-y-2">
+              <div class="w-auto bg-gray-100 rounded-lg p-3  space-y-2">
+                  <div class="flex justify-between items-center">
+                      <span>全部收藏</span>
+                      <Icon size="18" color="gray"><Add12Filled/></Icon>
+                  </div>
+                  <div><span class="text-gray-400  text-xs">3 条内容</span></div>
+              </div>
+              <div class="w-auto rounded-lg p-3  space-y-2">
+                  <div class="flex justify-between items-center">
+                      <span>Test</span>
+                      <Icon size="18" color="gray"><MoreHorizontal28Regular/></Icon>
+                  </div>
+                  <div><span class="text-gray-400  text-xs">3 条内容</span></div>
+              </div>
+          </div>
+          <div class="flex-1 h-auto px-5">
+              
+          </div>
+      </div>
+    </main>
 </template>
 <script setup lang="ts">
-import { onBeforeUnmount, ref, shallowRef, onMounted,reactive} from 'vue'
-import {NPopselect} from "naive-ui"
+import { onBeforeUnmount, ref, shallowRef, onMounted,reactive,h} from 'vue'
+/* exported icon*/
 import {Icon} from "@vicons/utils"
-import {Search12Filled,ArrowSortDownLines20Filled,Filter16Filled,Add12Filled} from "@vicons/fluent";
+import {Search12Filled,MoreHorizontal28Regular,Filter16Filled,Add12Filled} from "@vicons/fluent";
+/* exported ui */
+import {NPopselect, NButton, useMessage } from 'naive-ui'
+import type { DataTableColumns } from 'naive-ui'
 const options=reactive([
         {
           label: '小记',
@@ -61,16 +70,8 @@ const options=reactive([
           value: '已归档'
         }
 ])
-const upTime=reactive([
-        {
-          label: '更新时间排序',
-          value: '更新时间排序'
-        },
-        {
-          label: '创建时间排序',
-          value: '创建时间排序'
-        }
-])
+/* table data */
+
 </script>
 <style scoped lang="scss">
         .title{font-size: 18px;line-height: 75px;}
