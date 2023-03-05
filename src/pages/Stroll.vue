@@ -46,10 +46,38 @@
             </n-tabs>
         </div>
         <div class="w-420px pl-6">
-            <p class="flex justify-between items-center">
+            <p class="flex justify-between items-center my-5">
                 <span class="title">推荐花园</span>
                 <span class="text-blue-500">换一换</span>
             </p>
+            <div>
+                <div  v-for="item in 4" :key="item" class="w-auto mr-5 border border-gray-200 rounded-lg p-5 space-y-5 mb-5"
+                 style="background: url('https://mdn.alipayobjects.com/huamei_0prmtq/afts/img/A*ksNSS7r2V5gAAAAAAAAAAAAADvuFAQ/original') right bottom no-repeat; background-size: 40%;"
+                 >
+                    <div class="flex items-center gap-3">
+                        <n-avatar
+                            round
+                            size="small"
+                            src="https://p3-passport.byteimg.com/img/user-avatar/5c9a2641877196605c37fdb39f173b17~100x100.awebp"
+                            />
+                        <div>
+                            <p>陈豪✨</p>
+                            <p class="text-gray-500">保持成长 让美好持续发生</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-gray-500 text-sm mb-1">推荐阅读</p>
+                        <p>DISC人格模型的应用与启发</p>
+                    </div>
+                </div>
+                <div class="flex justify-between bg-gray-100 p-4 mr-5 rounded-lg">
+                    <div>
+                        <p>开启自己的花园</p>
+                        <p>从入门到精通</p>
+                    </div>
+                    <button class="bg-green-500 text-white px-3 rounded-lg">查看手册</button>
+                </div>
+            </div>
         </div>
     </main>
 </template>
