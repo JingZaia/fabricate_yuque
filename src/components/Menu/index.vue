@@ -87,11 +87,14 @@
             </div>
     </header>
     <div class="search">
-        <n-input default-value="哦" show-count clearable>
-            <template >
-            </template>
-        </n-input>
-        <n-button>Default</n-button>
+        <div class="bg-gray-100 rounded-lg flex-1 flex px-2 items-center gap-1 justify-between">
+            <div>
+                <Icon size="18" color="gray"><Search12Filled/></Icon>
+            </div>
+            <div class="flex-1 text-gray-400">搜索</div>
+            <div class="text-sm text-gray-400">Ctrl J</div>
+        </div>
+        <button class="bg-white border rounded-lg text-xl" style="height:33px;width:33px;line-height: 33px;">+</button>
     </div>
     <div class="menu">
         <router-link to="/dashboard/start" active-class="active-item" class="menu-item">
@@ -129,7 +132,7 @@ import type { MenuOption } from 'naive-ui'
 /* icon */
 import {Icon} from "@vicons/utils"
 import {IosArrowDown,MdNotificationsOutline,MdFlower,IosExit,MdMoon,MdAperture} from "@vicons/ionicons4";
-import {ShieldCheckmark24Filled,Settings32Filled,Home12Filled,Document16Filled,Collections20Filled,CameraSwitch24Filled,AddSquareMultiple20Filled} from "@vicons/fluent";
+import {ShieldCheckmark24Filled,Search12Filled,Settings32Filled,Home12Filled,Document16Filled,Collections20Filled,CameraSwitch24Filled,AddSquareMultiple20Filled} from "@vicons/fluent";
 function renderIcon (icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
 }

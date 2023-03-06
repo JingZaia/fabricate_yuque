@@ -3,7 +3,12 @@
         <div class="w-980px border-l-gray-50 border-solid border-r pr-14 pt-4">
             <n-tabs size="large" animated>
                 <n-tab-pane name="oasis" tab="关注">
-                    Wonderwall
+                    <div class="flex flex-col gap-2 justify-center items-center">
+                        <div>
+                            <img width="184" src="https://gw.alipayobjects.com/mdn/prod_resource/afts/img/A*0QPWRaKylQwAAAAAAAAAAAAAARQnAQ">
+                        </div>                    
+                        <p>暂无更新，先去 <a href="#">推荐</a> 看看</p>
+                    </div>
                 </n-tab-pane>
                 <n-tab-pane name="the beatles" tab="推荐">
                     <div v-for="(item,i) in listData" :key="i" class="mb-5">
